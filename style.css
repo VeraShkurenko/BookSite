@@ -5,7 +5,101 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
 }
+.category-item {
+    position: relative;
+}
 
+.category-item .nav-link {
+    background-color: #f8f9fa;
+    transition: background-color 0.3s ease;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.category-item .nav-link:hover {
+    background-color: #e0e0e0; 
+    color: #000;
+}
+
+.subcategories {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    list-style: none;
+    padding: 10px 0;
+    z-index: 1000;
+    min-width: 150px;
+}
+
+.subcategories li {
+    padding: 5px 15px;
+}
+
+.subcategories li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.2s ease;
+}
+
+.subcategories li a:hover {
+    color: #007bff;
+}
+
+.category-item:hover .subcategories {
+    display: block;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.card-img-top {
+    height: 200px; 
+    object-fit: contain;
+    background-color: #f8f8f8; 
+}
+
+.card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.text-muted {
+    margin-top: 0.5rem;
+}
+
+.btn {
+    align-self: flex-start;
+}
+
+.row > .col-md-4 {
+    display: flex;
+    flex-direction: column;
+}
 
 
 h1, h2, h3 {
@@ -20,7 +114,6 @@ a {
 a:hover {
     color: #007bff;
 }
-
 
 header {
     border-bottom: #111 solid 0.8px;
